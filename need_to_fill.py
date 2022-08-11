@@ -22,33 +22,26 @@ class Sentence_Box:
 
 
 # 1 Sentence Box 객체를 상속하는 Word_Cleaner 제작.
-# stop words list를 추가. stop words list = ["은", "는", "이", "가"]. init 함수에서 부모 init를 실행.
-class Word_Cleaner(Sentence_Box):
-    stop_words = ["은", "는", "이", "가"]
-
-    def __init__(self, sentence: str = ""):
-        super().__init__(sentence)
+# stop words list를 추가. stop words list = ["은", "는", "이", "가"]
+class Word_Cleaner:
+    def __init__(self):
+        pass
 
     # 2 입력한 문장의 단어 개수를 세는 내부 함수 제작
     def get_words_count(self) -> int:
-        return len(self._words)
+        pass
 
     # 3 주어진 단어의 끝 문자가 stop_words에 있으면 stop word를 제거하여 반환하는 함수 제작
     def remove_stop_words(self, word: str) -> str:
-        if word[-1] in self.stop_words:
-            word = word[:-1]
-        return word
+        pass
 
     # 4 저장된 문장의 stopword를 제거하는 함수 제작. 3번에서 제작한 함수 응용
     def reform_words(self):
-        for i, word in enumerate(self._words):
-            self._words[i] = self.remove_stop_words(word)
+        pass
 
     # 5 insert_sentence 함수를 새롭게 제작. stop word를 제거하는 과정 추가. 4번에서 제작한 함수 응용.
     def insert_sentence(self, sentence: str):
-        self._sentence = sentence
-        self._separate_sentence()
-        self.reform_words()
+        pass
 
 
 def main_process():
